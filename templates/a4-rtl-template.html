@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>عنوان الوثيقة</title>
+<style>
+@page{size:A4 portrait;margin:10mm}
+*{box-sizing:border-box}
+html,body{direction:rtl}
+body{margin:0;background:#fff;color:#111;text-align:right;font-family:"Traditional Arabic","Amiri","Cairo",Tahoma,serif;font-size:20px;line-height:1.9}
+.a4-page{width:190mm;min-height:277mm;margin:0 auto;padding:7mm;border:1.5px solid #1e3a8a;display:flex;flex-direction:column;gap:5mm;break-after:page;page-break-after:always}
+.a4-page:last-child{break-after:auto;page-break-after:auto}
+.header-box{border:1.5px solid #1e3a8a;border-radius:5px;background:#f0f4ff;padding:3mm 4mm;font-size:16px;font-weight:700}
+.header-row{display:flex;flex-direction:row;justify-content:space-between;gap:4mm}
+.header-cell{flex:1;min-width:0}
+.header-cell.center{text-align:center}
+.header-cell.end{text-align:left}
+.doc-title{margin:0;padding:2mm 3mm;background:#1e3a8a;color:#fff;text-align:center;border-radius:5px;font-size:24px}
+.page-flow{display:flex;flex-direction:column;gap:5mm;align-items:stretch}
+.vertical-card{width:100%;display:flex;flex-direction:column;gap:3mm;padding:4mm;border:1.5px solid #c7d2fe;border-right:6px solid #1e3a8a;border-radius:6px;break-inside:avoid;page-break-inside:avoid}
+.ex-top{display:flex;flex-direction:row;align-items:flex-start;gap:4mm}
+.ex-badge{flex:0 0 auto;min-width:20mm;padding:1mm 2mm;border:1.5px solid #1e3a8a;border-radius:4px;text-align:center;font-weight:700}
+.ex-instruction{flex:1;font-weight:700}
+.ex-body{width:100%}
+.answer-lines{display:flex;flex-direction:column}
+.answer-line{height:12mm;border-bottom:1px dotted #555}
+.score-table{width:100%;border-collapse:collapse;text-align:center;font-size:16px;break-inside:avoid}
+.score-table th,.score-table td{border:1px solid #1e3a8a;padding:2mm}
+.score-table th{background:#f0f4ff}
+@media print{html,body{margin:0;padding:0;background:#fff}.a4-page{margin:0;overflow:visible}.header-box,.doc-title,.score-table th{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style>
+</head>
+<body>
+<!--
+قالب أولي تابع للدستور PEDAGOGICAL-RULES.md.
+لا تضع أكثر من ستة تمارين في الصفحة. أنشئ صفحات مستقلة يدويًا عند الحاجة.
+يجب اختبار العرض والطباعة فعليًا؛ هذا القالب غير موصوف بأنه مختبَر أو جاهز نهائيًا.
+لا تقسّم التمرين الواحد بين الصفحات ولا تصغّر الخط لحشر المحتوى.
+-->
+<section class="a4-page" dir="rtl">
+  <header class="header-box">
+    <div class="header-row">
+      <div class="header-cell">المدرسة: المدرسة الابتدائية الشهبانية<br>المستوى: السنة الأولى ابتدائي</div>
+      <div class="header-cell center">المادة: ………………<br>الموضوع: ………………</div>
+      <div class="header-cell end">إعداد: المربي البشير السعيدي<br>السنة الدراسية: ………………</div>
+    </div>
+  </header>
+  <h1 class="doc-title">عنوان الوثيقة</h1>
+  <main class="page-flow">
+    <!-- كرّر البطاقة عموديًا، وبحد أقصى ست بطاقات في الصفحة -->
+    <article class="vertical-card">
+      <div class="ex-top">
+        <span class="ex-badge">١</span>
+        <div class="ex-instruction">نص التعليمة كما يقدّمه المستخدم</div>
+      </div>
+      <div class="ex-body">محتوى النشاط أو مساحة العمل.</div>
+    </article>
+  </main>
+</section>
+</body>
+</html>
